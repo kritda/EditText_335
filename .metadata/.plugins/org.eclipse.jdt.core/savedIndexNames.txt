@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\Bank\Documents\55410335\resume_kritda\.metadata\.plugins\org.eclipse.jdt.core
+4006941090.index
+2754155606.index
+4088939598.index
+2563709473.index

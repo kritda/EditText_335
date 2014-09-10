@@ -1,0 +1,52 @@
+package app.lap.resume_kritda;
+
+
+
+	import android.app.Activity;
+	import android.content.Intent;
+	import android.os.Bundle;
+	import android.view.View;
+	import android.view.View.OnClickListener;
+	import android.widget.Button;
+	import android.widget.EditText;
+	import android.widget.TextView;
+	public class edit_bank extends Activity implements OnClickListener {
+	private Button btnsubmit;
+	private EditText etxt1, etxt2, etxt3, etxt4;
+	private String txt11, txt12, txt13, txt14;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	setContentView(R.layout.edit_335);
+	super.onCreate(savedInstanceState);
+	ViewMatching();
+	}
+	private void ViewMatching() {
+	btnsubmit = (Button) findViewById(R.id.btnsave);
+	btnsubmit.setOnClickListener(this); 
+	etxt1 = (EditText) findViewById(R.id.txt11);
+	etxt2 = (EditText) findViewById(R.id.txt22);
+	etxt3 = (EditText) findViewById(R.id.txt33);
+	etxt4 = (EditText) findViewById(R.id.txt44);
+	
+	}
+	@Override
+	public void onClick(View v) {
+	switch (v.getId()) {
+	case R.id.btnsave:
+	txt11 = (etxt1.getText().toString());
+	txt12 = (etxt2.getText().toString());
+	txt13 = (etxt3.getText().toString());
+	txt14 = (etxt4.getText().toString());
+	
+	Intent R = new Intent(getApplicationContext(), MainActivity.class);
+	R.putExtra("txt11", txt11);
+	R.putExtra("txt12", txt12);
+	R.putExtra("txt13", txt13);
+	R.putExtra("txt14", txt14);
+	startActivity(R);
+	break;
+	default:
+	break;
+	}
+	}
+	}
